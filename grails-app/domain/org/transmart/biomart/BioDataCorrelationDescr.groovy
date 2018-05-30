@@ -31,4 +31,13 @@ class BioDataCorrelationDescr {
 		id generator: 'sequence', params: [sequence: 'BIOMART.SEQ_BIO_DATA_ID'], column: 'BIO_DATA_CORREL_DESCR_ID'
 		version false
 	}
+
+	static constraints = {
+		correlation nullable: true
+		description nullable: true
+		source nullable: true
+		sourceCode nullable: true
+		status nullable: true
+		typeName nullable: true
+	}
 }

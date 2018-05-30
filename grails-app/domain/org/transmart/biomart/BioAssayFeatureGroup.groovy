@@ -36,4 +36,9 @@ class BioAssayFeatureGroup {
 		name column: 'FEATURE_GROUP_NAME'
 		type column: 'FEATURE_GROUP_TYPE'
 	}
+
+	static constraints = {
+		name maxSize: 100
+		type maxSize: 50
+	}
 }

@@ -18,10 +18,14 @@
  ******************************************************************/
 package org.transmart.biomart
 
+import groovy.transform.EqualsAndHashCode
+
+@EqualsAndHashCode(includes = ['bioMarker', 'probeSet'])
 class BioAssayDataAnnotation implements Serializable {
 	private static final long serialVersionUID = 1
 
 	BioMarker bioMarker
+	String dataTable
 	BioAssayFeatureGroup probeset
 
 	static mapping = {
@@ -30,5 +34,9 @@ class BioAssayDataAnnotation implements Serializable {
 		version false
 
 		probeset column: 'BIO_ASSAY_FEATURE_GROUP_ID'
+	}
+
+	static constraints = {
+		dataTable nullable: true
 	}
 }
